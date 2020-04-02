@@ -3469,7 +3469,7 @@ MonoBehaviour:
   m_MeshFormatVersion: 1
   m_Faces:
   - m_Indexes: 000000000100000002000000
-    m_SmoothingGroup: 4
+    m_SmoothingGroup: 0
     m_Uv:
       m_UseWorldSpace: 0
       m_FlipU: 0
@@ -3486,7 +3486,7 @@ MonoBehaviour:
     elementGroup: -1
     m_TextureGroup: -1
   - m_Indexes: 030000000400000005000000040000000600000005000000
-    m_SmoothingGroup: 4
+    m_SmoothingGroup: 0
     m_Uv:
       m_UseWorldSpace: 0
       m_FlipU: 0
@@ -3503,7 +3503,7 @@ MonoBehaviour:
     elementGroup: -1
     m_TextureGroup: -1
   - m_Indexes: 070000000800000009000000
-    m_SmoothingGroup: 4
+    m_SmoothingGroup: 0
     m_Uv:
       m_UseWorldSpace: 0
       m_FlipU: 0
@@ -3520,7 +3520,7 @@ MonoBehaviour:
     elementGroup: -1
     m_TextureGroup: -1
   - m_Indexes: 0a0000000b0000000c0000000b0000000d0000000c000000
-    m_SmoothingGroup: 4
+    m_SmoothingGroup: 0
     m_Uv:
       m_UseWorldSpace: 0
       m_FlipU: 0
@@ -3537,7 +3537,7 @@ MonoBehaviour:
     elementGroup: -1
     m_TextureGroup: -1
   - m_Indexes: 0e0000000f000000100000000f0000001100000010000000
-    m_SmoothingGroup: 4
+    m_SmoothingGroup: 0
     m_Uv:
       m_UseWorldSpace: 0
       m_FlipU: 0
@@ -3602,24 +3602,24 @@ MonoBehaviour:
   m_Textures2: []
   m_Textures3: []
   m_Tangents:
-  - {x: -0.89732, y: 0.057656627, z: -0.4375987, w: -1}
-  - {x: -0.89732, y: -0.057656627, z: 0.4375987, w: -1}
   - {x: -1, y: 0, z: 0, w: -1}
-  - {x: 0.7504862, y: -0.49525538, z: -0.43759874, w: -1}
-  - {x: 0.7504862, y: -0.49525538, z: 0.43759874, w: -1}
-  - {x: 0.961663, y: -0.13685404, z: 0.23764524, w: -1}
-  - {x: 0.961663, y: -0.13685404, z: -0.23764524, w: -1}
-  - {x: 0.89732, y: 0.057656627, z: 0.4375987, w: -1}
-  - {x: 0.89732, y: -0.057656627, z: -0.4375987, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: 0.86824316, y: -0.49613896, z: 0, w: -1}
+  - {x: 0.86824316, y: -0.49613896, z: 0, w: -1}
+  - {x: 0.86824316, y: -0.49613896, z: 0, w: -1}
+  - {x: 0.86824316, y: -0.49613896, z: 0, w: -1}
   - {x: 1, y: 0, z: 0, w: -1}
-  - {x: 0.7504862, y: 0.49525538, z: -0.43759874, w: -1}
-  - {x: 0.7504862, y: 0.49525538, z: 0.43759874, w: -1}
-  - {x: 0.961663, y: 0.13685404, z: 0.23764524, w: -1}
-  - {x: 0.961663, y: 0.13685404, z: -0.23764524, w: -1}
-  - {x: -0.89732, y: 0.057656627, z: 0.4375987, w: -1}
-  - {x: -0.89732, y: -0.057656627, z: -0.4375987, w: -1}
-  - {x: -0.89732, y: 0.057656627, z: -0.4375987, w: -1}
-  - {x: -0.89732, y: -0.057656627, z: 0.4375987, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 1, y: 0, z: 0, w: -1}
+  - {x: 0.86824316, y: 0.49613896, z: 0, w: -1}
+  - {x: 0.86824316, y: 0.49613896, z: 0, w: -1}
+  - {x: 0.86824316, y: 0.49613896, z: 0, w: -1}
+  - {x: 0.86824316, y: 0.49613896, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
+  - {x: -1, y: 0, z: 0, w: -1}
   m_Colors: []
   m_UnwrapParameters:
     m_HardAngle: 88
