@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
     Animator anim;
     public Transform player;
+
+    public Slider healthBar;
 
     private void Start()
     {
@@ -14,6 +17,7 @@ public class EnemyController : MonoBehaviour
 
     private void Update()
     {
+        if (healthBar.value <= 0) return;
         if(Vector3.Distance(player.position, this.transform.position) < 10)
         {
             Vector3 direction = player.position - this.transform.position;
