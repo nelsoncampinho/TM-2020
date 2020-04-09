@@ -7,7 +7,7 @@ public class EnemyController : MonoBehaviour
 {
     Animator anim;
     public Transform player;
-
+    private float currentEnemyHealth = 0;
     public Slider healthBar;
 
     private void Start()

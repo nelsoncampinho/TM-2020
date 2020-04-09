@@ -13,7 +13,7 @@ public class DetectHit : MonoBehaviour
         if (other.gameObject.tag != enemy) return;
 
         healthBar.value -= 20;
-        if(healthBar.value <= 20)
+        if(healthBar.value <= 0)
         {
             anim.SetBool("isDead", true);
         }
