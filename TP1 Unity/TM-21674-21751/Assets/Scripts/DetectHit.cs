@@ -8,6 +8,7 @@ public class DetectHit : MonoBehaviour
     public Slider healthBar;
     Animator anim;
     public string enemy;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag != enemy) return;
@@ -16,6 +17,7 @@ public class DetectHit : MonoBehaviour
         if(healthBar.value <= 0)
         {
             anim.SetBool("isDead", true);
+           
         }
         Debug.Log("Hit");
     }
@@ -25,9 +27,4 @@ public class DetectHit : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
