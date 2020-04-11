@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class KillOrcs : Quest
 {
     private void Awake()
     {
         questName = "Orcs Extinction";
         description = "Kill the orcs that invaded the big tree";
-        goal = new KillGoal(2, "Enemy", this);
+        goal = new KillGoal(2, "Enemy");
     }
 
     public override void Complete()
     {
-
         base.Complete();
     }
 }

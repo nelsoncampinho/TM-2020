@@ -2,25 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KillGoal : Goal
+[ExecuteInEditMode]
+public class KillGoal : Goal, DeathEventListener
 {
     public string enemyTag;
 
     private DetectHit detect = new DetectHit();
 
-    public KillGoal(int amountNeeded, string enemyTag, Quest quest)
+    public KillGoal(int amountNeeded, string enemyTag)
     {
         numberKilled = 0;
         numberNeeded = amountNeeded;
         completed = false;
-        this.quest = quest;
         this.enemyTag = enemyTag;
     }
 
-    public void EnemyKilled(string enemyTag)
+    public void OnDeath(string enemyTag)
     {
+        Debug.Log(enemyTag);
         if(this.enemyTag == enemyTag)
         {
+            Debug.Log("dentro do on death");
             Increment(1);
         }
     }

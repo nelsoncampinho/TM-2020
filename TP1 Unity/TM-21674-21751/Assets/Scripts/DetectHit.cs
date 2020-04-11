@@ -8,15 +8,26 @@ public class DetectHit : MonoBehaviour
     public Slider healthBar;
     Animator anim;
     public string enemy;
+    public string player;
+    private bool isDead;
+
+    public GlobalQuestController manager;
+
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag != enemy) return;
 
-        healthBar.value -= 20;
+        healthBar.value -= 100;
         if(healthBar.value <= 0)
         {
-            anim.SetBool("isDead", true);
+            if (!isDead)
+            {
+                manager.TriggerDeathEvent(player);
+
+                anim.SetBool("isDead", true);
+                isDead = true;
+            }
            
         }
         Debug.Log("Hit");
@@ -25,6 +36,9 @@ public class DetectHit : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        isDead = false;
     }
+
+   
 
 }

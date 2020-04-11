@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Goal
+[ExecuteInEditMode]
+public class Goal : MonoBehaviour
 {
     public int numberNeeded;
     public int numberKilled;
     public bool completed;
-    public Quest quest;
 
     public void Increment(int amount)
     {
@@ -19,7 +19,6 @@ public class Goal
         {
             this.completed = true;
             Debug.Log("Goal Completed!");
-            quest.Complete();
         }
     }
 }
