@@ -12,21 +12,27 @@ public class DetectHit : MonoBehaviour
     private bool isDead;
 
     public GlobalQuestController manager;
+    public RespawnManager respawn;
 
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag != enemy) return;
-
+        
         healthBar.value -= 100;
         if(healthBar.value <= 0)
         {
             if (!isDead)
             {
-                manager.TriggerDeathEvent(player);
 
                 anim.SetBool("isDead", true);
                 isDead = true;
+                if(other.gameObject.tag == "Enemy")
+                {
+                    Debug.Log("Player");
+                    respawn.RespawnPlayer(player);
+                }
+                manager.TriggerDeathEvent(player);
             }
            
         }

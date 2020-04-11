@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [ExecuteInEditMode]
 public class Goal : MonoBehaviour
@@ -8,6 +9,7 @@ public class Goal : MonoBehaviour
     public int numberNeeded;
     public int numberKilled;
     public bool completed;
+    public Text text;
 
     public void Increment(int amount)
     {
@@ -18,7 +20,15 @@ public class Goal : MonoBehaviour
         if(numberKilled >= numberNeeded && !completed)
         {
             this.completed = true;
+            text.text = "Quest Completed!";
+            
             Debug.Log("Goal Completed!");
         }
     }
+
+    private void Start()
+    {
+        text.text = "";
+    }
+
 }
