@@ -30,5 +30,6 @@ public class RespawnManager : MonoBehaviour
     {
         anim.SetBool("isDead", false);
         playerHealth.value = 1000;
+        return;
     }
 }
