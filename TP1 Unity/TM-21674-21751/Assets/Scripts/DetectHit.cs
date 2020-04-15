@@ -30,7 +30,7 @@ public class DetectHit : MonoBehaviour
                 if(other.gameObject.tag == "Enemy")
                 {
                     Debug.Log("Player");
-                    respawn.RespawnPlayer(player);
+                    respawn.RespawnAfterDeath();
                 }
                 manager.TriggerDeathEvent(player);
             }

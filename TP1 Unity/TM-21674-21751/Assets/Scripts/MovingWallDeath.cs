@@ -15,8 +15,10 @@ public class MovingWallDeath : MonoBehaviour
     {
         if (other.gameObject.tag == player.tag)
         {
+
             playerHealth.value = 0;
-            respawn.RespawnPlayer(player.tag);
+            Debug.Log(playerHealth.value);
+            respawn.RespawnAfterDeath();
         }
     }
 }

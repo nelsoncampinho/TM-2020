@@ -5,24 +5,32 @@ using UnityEngine.UI;
 
 public class RespawnManager : MonoBehaviour
 {
+    public List<Respawn> respawns;
     public Transform player;
-    public Transform respawnPosition;
-    private Vector3 playerNewPosition;
+    public PlayerRespawn hisRespawn;
     public Animator anim;
     public Slider playerHealth;
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == this.player.tag)
+        foreach(Respawn element in respawns)
         {
-            playerNewPosition= new Vector3(respawnPosition.position.x, respawnPosition.position.y, respawnPosition.position.z);
-            Debug.Log("Nova Posição");
+            element.OnTriggerEnter(other);
         }
     }
 
-    public void RespawnPlayer(string player)
+    public void RespawnAfterDeath()
     {
-        this.player.transform.position = playerNewPosition;
+        Debug.Log("Here");
+        Vector3 vector3 = hisRespawn.GetVectorPosition();
+        PlacePlayerRespawn(vector3);
+    }
+
+    private void PlacePlayerRespawn(Vector3 vector3)
+    {
+        Debug.Log("hereRespawn");
+        Debug.Log(vector3);
+        player.transform.position = vector3;
         RevivePlayer();
     }
 
