@@ -18,25 +18,26 @@ public class DetectHit : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag != enemy) return;
-        
-        healthBar.value -= 100;
-        if(healthBar.value <= 0)
+        if (!isDead)
         {
-            if (!isDead)
+            healthBar.value -= 100;
+            if (healthBar.value <= 0)
             {
-
-                anim.SetBool("isDead", true);
-                isDead = true;
-                if(other.gameObject.tag == "Enemy")
+                if (!isDead)
                 {
-                    Debug.Log("Player");
-                    respawn.RespawnAfterDeath();
+
+                    anim.SetBool("isDead", true);
+                    isDead = true;
+                    if (other.gameObject.tag == "Enemy")
+                    {
+                        Debug.Log("Player");
+                        respawn.RespawnAfterDeath();
+                    }
+                    manager.TriggerDeathEvent(player);
                 }
-                manager.TriggerDeathEvent(player);
+
             }
-           
         }
-        Debug.Log("Hit");
     }
     // Start is called before the first frame update
     void Start()
